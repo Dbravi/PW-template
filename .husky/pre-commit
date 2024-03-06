@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Running ESLint..."
+npx eslint .
+if [ $? -ne 0 ]; then
+    echo "ESLint failed, aborting commit"
+    exit 1
+fi
+
+echo "ESLint Passed, Committing"
